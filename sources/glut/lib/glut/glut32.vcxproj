@@ -75,8 +75,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)tmp\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)tmp\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
@@ -85,8 +85,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)tmp\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)tmp\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -157,9 +157,12 @@ copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy $(TargetDir)glut32.dll %WINDIR%\SYSTEM32
-copy $(TargetDir)glut32.lib "$(DevEnvDir)..\..\VC98\lib"
-copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
+      <Command>mkdir $(SolutionDir)$(Platform)\$(Configuration)\bin\
+mkdir $(SolutionDir)$(Platform)\$(Configuration)\lib\
+mkdir $(SolutionDir)$(Platform)\$(Configuration)\include\GL\
+copy $(ProjectDir)$(Configuration)\glut32.dll  $(SolutionDir)$(Platform)\$(Configuration)\bin\
+copy $(ProjectDir)$(Configuration)\glut32.lib  $(SolutionDir)$(Platform)\$(Configuration)\lib\
+copy $(SolutionDir)include\GL\glut.h 	 $(SolutionDir)$(Platform)\$(Configuration)\include\GL\</Command>
       <Message>Copying libraries, headers &amp; dll%27s...</Message>
     </PostBuildEvent>
     <Midl>
@@ -254,9 +257,12 @@ copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy $(TargetDir)glut32.dll %WINDIR%\SYSTEM
-copy $(TargetDir)glut32.lib "$(DevEnvDir)..\..\VC98\lib"
-copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
+      <Command>mkdir $(SolutionDir)$(Platform)\$(Configuration)\bin\
+mkdir $(SolutionDir)$(Platform)\$(Configuration)\lib\
+mkdir $(SolutionDir)$(Platform)\$(Configuration)\include\GL\
+copy $(ProjectDir)$(Configuration)\glut32.dll  $(SolutionDir)$(Platform)\$(Configuration)\bin\
+copy $(ProjectDir)$(Configuration)\glut32.lib  $(SolutionDir)$(Platform)\$(Configuration)\lib\
+copy $(SolutionDir)include\GL\glut.h 	 $(SolutionDir)$(Platform)\$(Configuration)\include\GL\</Command>
       <Message>Copying libraries, headers &amp; dll%27s...</Message>
     </PostBuildEvent>
     <Midl>
