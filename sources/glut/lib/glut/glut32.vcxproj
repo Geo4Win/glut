@@ -157,12 +157,8 @@ copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
     </ClCompile>
     <PostBuildEvent>
-      <Command>mkdir $(SolutionDir)$(Platform)\$(Configuration)\bin\
-mkdir $(SolutionDir)$(Platform)\$(Configuration)\lib\
-mkdir $(SolutionDir)$(Platform)\$(Configuration)\include\GL\
-copy $(ProjectDir)$(Configuration)\glut32.dll  $(SolutionDir)$(Platform)\$(Configuration)\bin\
-copy $(ProjectDir)$(Configuration)\glut32.lib  $(SolutionDir)$(Platform)\$(Configuration)\lib\
-copy $(SolutionDir)include\GL\glut.h 	 $(SolutionDir)$(Platform)\$(Configuration)\include\GL\</Command>
+      <Command>
+      </Command>
       <Message>Copying libraries, headers &amp; dll%27s...</Message>
     </PostBuildEvent>
     <Midl>
@@ -257,12 +253,8 @@ copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
     </ClCompile>
     <PostBuildEvent>
-      <Command>mkdir $(SolutionDir)$(Platform)\$(Configuration)\bin\
-mkdir $(SolutionDir)$(Platform)\$(Configuration)\lib\
-mkdir $(SolutionDir)$(Platform)\$(Configuration)\include\GL\
-copy $(ProjectDir)$(Configuration)\glut32.dll  $(SolutionDir)$(Platform)\$(Configuration)\bin\
-copy $(ProjectDir)$(Configuration)\glut32.lib  $(SolutionDir)$(Platform)\$(Configuration)\lib\
-copy $(SolutionDir)include\GL\glut.h 	 $(SolutionDir)$(Platform)\$(Configuration)\include\GL\</Command>
+      <Command>
+      </Command>
       <Message>Copying libraries, headers &amp; dll%27s...</Message>
     </PostBuildEvent>
     <Midl>
