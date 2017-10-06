@@ -107,10 +107,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy $(TargetDir)glut32.dll %WINDIR%\SYSTEM32
-copy $(TargetDir)glut32.lib "$(DevEnvDir)..\..\VC98\lib"
-copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
-      <Message>Copying libraries, headers &amp; dll%27s...</Message>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -159,7 +159,8 @@ copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
     <PostBuildEvent>
       <Command>
       </Command>
-      <Message>Copying libraries, headers &amp; dll%27s...</Message>
+      <Message>
+      </Message>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -204,10 +205,10 @@ copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy $(TargetDir)glut32.dll %WINDIR%\SYSTEM
-copy $(TargetDir)glut32.lib "$(DevEnvDir)..\..\VC98\lib"
-copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
-      <Message>Copying libraries, headers &amp; dll%27s...</Message>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -255,7 +256,8 @@ copy ..\..\include\GL\glut.h "$(DevEnvDir)..\..\VC98\include\GL"</Command>
     <PostBuildEvent>
       <Command>
       </Command>
-      <Message>Copying libraries, headers &amp; dll%27s...</Message>
+      <Message>
+      </Message>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
